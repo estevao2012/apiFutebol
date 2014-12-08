@@ -1,5 +1,5 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   pool: 5
   timeout: 5000
   username: root
@@ -7,15 +7,15 @@ default: &default
 
 development:
   <<: *default
-  database: db/apifutebol_development
+  database: apifutebol_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/apifutebol_test
+  database: apifutebol_test
 
 production:
   <<: *default
-  database: db/apifutebol_production
+  database: apifutebol_production
